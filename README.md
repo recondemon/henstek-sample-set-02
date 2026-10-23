@@ -1,6 +1,6 @@
 # HensTek Sample Set 02 — Side A
 
-A fictional listening bar and record shop, built as three independent working examples. **Night Shift** is the shared direction: ink black, warm ivory, vermilion, editorial serif type and a record-label emblem.
+A fictional listening bar and record shop, built as three independent working examples. **Night Shift** is the shared direction: paper cream, tomato red, cobalt blue, oversized poster typography and a record-label emblem. The website is a record-store editorial; the iPhone app opens as a ticket wallet; desktop is a full-width guest ledger with a separate session docket.
 
 [Explore Set 02](https://recondemon.github.io/henstek-sample-set-02/) · [HensTek sample gallery](https://henstek.dev/samples#sample-set-02) · [Discuss a build](https://henstek.dev/start?sample=set-02)
 

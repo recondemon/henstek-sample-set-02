@@ -8,7 +8,7 @@
       name="description"
       content="A fictional listening bar and record shop. HensTek Sample Set 02: explore the programme, save records and try a local booking."
     />
-    <meta name="theme-color" content="#191716" />
+    <meta name="theme-color" content="#f2eedf" />
     <link rel="icon" href="assets/side-a-mark.svg" />
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="app.js"></script>
@@ -16,29 +16,40 @@
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <div class="sample-bar">
-      <a href="../">Sample Set 02 ↗</a><span>SA-02 / WEB · Fictional venue</span
-      ><button id="my-booking">Your demo booking <span id="booking-dot"></span></button>
+      <a href="../">Sample Set 02 ↗</a
+      ><span>SA-02 / WEB · Fictional venue</span
+      ><button id="my-booking">
+        Your demo booking <span id="booking-dot"></span>
+      </button>
     </div>
     <header class="wrap">
       <a class="brand" href="#home" aria-label="Side A home"
-        ><img src="assets/side-a-mark.svg" width="42" height="42" alt="" /><span>SIDE A</span></a
+        ><img src="assets/side-a-mark.svg" width="42" height="42" alt="" /><span
+          >SIDE A</span
+        ></a
       >
       <nav aria-label="Main navigation">
-        <a href="#programme">The programme</a><a href="#records">The record shelf</a
-        ><a href="#room">The room</a>
+        <a href="#programme">The programme</a
+        ><a href="#records">The record shelf</a><a href="#room">The room</a>
       </nav>
       <a class="nav-book" href="#programme">Find your seat <span>↗</span></a>
     </header>
     <main id="main">
-      <section class="hero wrap" id="home">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span> A LISTENING BAR & RECORD SHOP</p>
-          <h1>Stay for<br />the <em>whole</em><br />record.</h1>
-          <p class="intro">Good sound. A little company.<br />Nowhere else you need to be.</p>
-          <a class="button primary" href="#programme">Discover a session <span>↗</span></a>
-          <div class="hero-note">
-            <span class="mini-record" aria-hidden="true"></span>
-            <p>One room. Two sides.<br /><strong>A different kind of night out.</strong></p>
+      <section class="hero" id="home">
+        <div class="masthead wrap">
+          <div class="edition">
+            <span>LISTENING BAR + RECORD SHOP</span
+            ><span>GOOD SOUND. GOOD COMPANY.</span
+            ><span>VOL. 02 / NOVEMBER</span>
+          </div>
+          <h1>
+            SIDE A<span class="masthead-record" aria-hidden="true"
+              ><span>33⅓<br /><small>RPM</small></span></span
+            >
+          </h1>
+          <div class="masthead-foot">
+            <span>A place for people who listen.</span
+            ><a href="#programme">This month’s programme ↓</a>
           </div>
         </div>
         <figure class="hero-image">
@@ -46,60 +57,70 @@
             src="assets/listening-room.webp"
             width="1536"
             height="1024"
-            alt="An intimate walnut listening room with vinyl shelves, vintage speakers and warm pendant light"
+            alt="Walnut record shelves and warm pendant light in the fictional Side A listening room"
             fetchpriority="high"
           />
-          <figcaption>
-            <span>DROP THE NEEDLE.<br />LET THE EVENING UNFOLD.</span
-            ><span class="roundel" aria-hidden="true">33⅓<br /><small>RPM</small></span>
+          <figcaption class="hero-ticket">
+            <span class="ticket-kicker">SIDE A / AN INVITATION</span>
+            <h2>PUT THE<br />WORLD<br />ON PAUSE.</h2>
+            <p>Two sides of a record.<br />A whole evening to yourself.</p>
+            <a href="#programme">Pull up a chair <span>↗</span></a>
           </figcaption>
+          <a class="hero-stamp" href="#records"
+            >GOOD<br />RECORDS.<br />GREAT<br />COMPANY. ↗</a
+          >
+          <span class="photo-credit"
+            >THE LISTENING ROOM / A FICTIONAL VENUE</span
+          >
         </figure>
       </section>
       <div class="ticker">
-        <div class="wrap">
-          <span>ALL VINYL. ALL THE WAY THROUGH.</span><span>EST. IN A GOOD MOOD</span
-          ><span>LISTEN A LITTLE CLOSER ↗</span>
-        </div>
+        <span>NO SHUFFLE.</span><span aria-hidden="true">✳</span
+        ><span>NO SKIPS.</span><span aria-hidden="true">✳</span
+        ><span>JUST LISTEN.</span><span aria-hidden="true">✳</span>
       </div>
       <section class="programme" id="programme">
         <div class="wrap">
           <div class="section-title">
             <div>
-              <p class="eyebrow">01 / ON THE TURNTABLE</p>
-              <h2>A night worth<br /><em>making time for.</em></h2>
+              <p class="eyebrow">THE NOVEMBER EDITION</p>
+              <h2>WHAT’S<br /><em>ON.</em></h2>
             </div>
             <p>
-              A few records. A host who knows them.<br />An unhurried evening, start to finish.<br /><span
-                class="dim"
+              A few records. A host who knows them.<br />An unhurried evening,
+              start to finish.<br /><span class="dim"
                 >Illustrative programme · 6–8 November</span
               >
             </p>
           </div>
           <div class="filters" role="group" aria-label="Filter sessions">
-            <button class="active" data-filter="all" aria-pressed="true">All sessions</button
+            <button class="active" data-filter="all" aria-pressed="true">
+              All sessions</button
             ><button data-filter="Jazz" aria-pressed="false">Jazz & soul</button
             ><button data-filter="Funk" aria-pressed="false">Funk</button
             ><button data-filter="Ambient" aria-pressed="false">Ambient</button>
           </div>
           <div id="sessions"></div>
           <p class="programme-note">
-            Sample prices in USD. This demo creates a local preview only — no seats are reserved and
-            no payment is taken.
+            Sample prices in USD. This demo creates a local preview only — no
+            seats are reserved and no payment is taken.
           </p>
         </div>
       </section>
       <section class="records wrap" id="records">
         <div class="section-title">
           <div>
-            <p class="eyebrow">02 / TAKE A LITTLE HOME</p>
-            <h2>From the<br /><em>listening shelf.</em></h2>
+            <p class="eyebrow">FROM THE RECORD SHOP</p>
+            <h2>GOOD FINDS.</h2>
           </div>
           <div>
             <p>
-              Fictional releases, real attention to detail.<br />Save a sleeve to build your own
-              little crate.
+              Fictional releases, real attention to detail.<br />Save a sleeve
+              to build your own little crate.
             </p>
-            <p class="crate-count" id="crate-count" aria-live="polite">Your crate · 0 saved</p>
+            <p class="crate-count" id="crate-count" aria-live="polite">
+              Your crate · 0 saved
+            </p>
           </div>
         </div>
         <div class="record-grid" id="record-grid"></div>
@@ -113,43 +134,47 @@
           alt="A vinyl record with a red center label, ivory sleeve and silver turntable on walnut"
         />
         <div class="room-copy">
-          <p class="eyebrow">03 / THE IDEA IS SIMPLE</p>
-          <h2>Less scrolling.<br /><em>More listening.</em></h2>
+          <p class="eyebrow">THE SIDE A WAY</p>
+          <h2>TUNE IN.<br /><em>SLOW DOWN.</em></h2>
           <p>
-            Pick a seat. Settle in. Hear a record the way it was meant to be heard — with a little
-            space around it.
+            Pick a seat. Settle in. Hear a record the way it was meant to be
+            heard — with a little space around it.
           </p>
           <details>
             <summary>What happens at a session?</summary>
             <p>
-              A host introduces a selection, then plays each side without interruption. Stay for the
-              conversation between records.
+              A host introduces a selection, then plays each side without
+              interruption. Stay for the conversation between records.
             </p>
           </details>
           <details>
             <summary>Is this a real venue?</summary>
             <p>
-              Side A is a fictional business built for HensTek Sample Set 02. The hosts, releases,
-              programme and imagery are illustrative. No actual bookings or purchases are available.
+              Side A is a fictional business built for HensTek Sample Set 02.
+              The hosts, releases, programme and imagery are illustrative. No
+              actual bookings or purchases are available.
             </p>
           </details>
           <details>
             <summary>Can I use this for my business?</summary>
             <p>
-              Yes. The source is MIT licensed. Live inventory, payments, customer accounts and
-              shared data would be scoped for your version.
+              Yes. The source is MIT licensed. Live inventory, payments,
+              customer accounts and shared data would be scoped for your
+              version.
             </p>
           </details>
         </div>
       </section>
       <section class="closing wrap">
         <p class="eyebrow">SAVE A LITTLE SPACE IN YOUR EVENING.</p>
-        <a href="#programme">See you on <em>Side A.</em><span>↗</span></a>
+        <a href="#programme">COME ON IN.<span>↗</span></a>
       </section>
     </main>
     <footer class="wrap">
       <a class="brand" href="#home"
-        ><img src="assets/side-a-mark.svg" width="34" height="34" alt="" /><span>SIDE A</span></a
+        ><img src="assets/side-a-mark.svg" width="34" height="34" alt="" /><span
+          >SIDE A</span
+        ></a
       >
       <p>A fictional listening room.<br />A working sample by HensTek.</p>
       <a href="https://henstek.dev/start?sample=set-02-website&style=sa-02-web"
@@ -182,12 +207,16 @@
             </select></label
           >
         </div>
-        <div class="total"><span>Illustrative total</span><strong id="total">$36</strong></div>
+        <div class="total">
+          <span>Illustrative total</span><strong id="total">$36</strong>
+        </div>
         <p class="small">
-          Use fictional details. This preview stays in this browser and replaces any previous demo
-          booking.
+          Use fictional details. This preview stays in this browser and replaces
+          any previous demo booking.
         </p>
-        <button class="button primary" type="submit">Create demo ticket <span>↗</span></button>
+        <button class="button primary" type="submit">
+          Create demo ticket <span>↗</span>
+        </button>
       </form>
       <div id="ticket" hidden>
         <p class="ticket-label">DEMO TICKET / NOT VALID FOR ENTRY</p>
@@ -196,7 +225,9 @@
         <div class="ticket-rule"></div>
         <div class="ticket-actions">
           <button class="button" id="export-ticket">Download ticket</button
-          ><button class="text-button" id="cancel-ticket">Cancel demo booking</button>
+          ><button class="text-button" id="cancel-ticket">
+            Cancel demo booking
+          </button>
         </div>
       </div>
       <p id="booking-status" role="status"></p>

@@ -19,6 +19,10 @@ Checked 23 October 2026. These are bounded sample checks, not a production secur
 
 Public previews are actual browser or iPhone Simulator captures. The desktop gallery image uses the browser renderer; its native app is tested separately.
 
+## Poster and ledger redesign
+
+The October 23 revision replaces the dark split hero with a cream record-store masthead and full-width venue image, turns sessions into music posters, opens the iPhone app in its ticket wallet, and replaces the desktop sidebar with a light ledger and separate session docket. Updated screenshots are actual captures. Rechecked the web booking total and cancellation, desktop check-in/undo and editor, native iPhone booking and all three tabs, and native desktop startup with retained local data. Model and build checks continue to pass.
+
 ## Limits and recovery
 
 No App Store submission, physical-device pass, Android/iPad implementation, Windows/Linux native test or signed/notarized desktop distribution is included. VoiceOver and a full WCAG audit have not been completed. Only fictional local data is used; there is no shared backend, real booking, streaming, payment, email or notification integration.

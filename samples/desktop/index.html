@@ -15,86 +15,109 @@
   </head>
   <body>
     <a class="skip" href="#main">Skip to guest list</a>
-    <aside>
+    <header class="app-bar">
       <div class="brand">
-        <img src="assets/side-a-mark.svg" width="40" height="40" alt="" /><strong>SIDE A</strong>
+        <img
+          src="assets/side-a-mark.svg"
+          width="30"
+          height="30"
+          alt=""
+        /><strong>SIDE A</strong><span>THE DOOR / GUEST SERVICES</span>
       </div>
-      <p class="side-label">THE DOOR / STUDIO TOOL</p>
-      <div class="nav-item">↗ <span>Guest list</span><span>03</span></div>
-      <div class="sidebar-bottom">
-        <p>SA-02 / DESKTOP</p>
-        <p id="storage-mode">Local browser preview</p>
-        <span class="local-dot">●</span> <span>Fictional records only</span>
+      <div class="storage">
+        <span id="storage-mode">Local browser preview</span
+        ><span>SA-02 / DESKTOP</span>
       </div>
-    </aside>
+    </header>
     <div class="workspace">
-      <header><span>NIGHT SHIFT / OPERATIONS</span><span>Sample programme · November</span></header>
       <main id="main">
         <div class="heading">
           <div>
-            <p class="eyebrow">A GOOD NIGHT STARTS AT THE DOOR.</p>
-            <h1>Make room.</h1>
+            <p class="eyebrow">SIDE A / FRONT OF HOUSE</p>
+            <h1>THE DOOR<span class="title-period">.</span></h1>
           </div>
           <button class="primary" id="add">+ Add booking</button>
         </div>
-        <div class="session-tabs" role="group" aria-label="Select session" id="session-tabs"></div>
-        <section class="session-summary">
-          <div>
-            <p class="eyebrow" id="session-date"></p>
-            <h2 id="session-name"></h2>
-            <p id="session-time"></p>
-          </div>
-          <div class="capacity">
-            <p><strong id="reserved">0</strong><span id="capacity-total">/ 24 seats</span></p>
-            <div class="meter"><div id="meter-fill"></div></div>
-            <span id="capacity-caption"></span>
-          </div>
-          <div class="arrived-summary">
-            <strong id="arrived">0</strong><span>Guests arrived</span>
-          </div>
-        </section>
-        <div class="list-toolbar">
-          <label class="search"
-            ><span>⌕</span
-            ><input
-              id="search"
-              type="search"
-              placeholder="Find a guest or note"
-              aria-label="Search guests and notes" /></label
-          ><label class="status-filter"
-            >Show<select id="filter">
-              <option value="all">All statuses</option>
-              <option value="booked">Expected</option>
-              <option value="arrived">Arrived</option>
-              <option value="canceled">Canceled</option>
-            </select></label
-          >
-          <p id="count"></p>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>GUEST / NOTE</th>
-                <th>PARTY</th>
-                <th>STATUS</th>
-                <th><span class="sr-only">Actions</span></th>
-              </tr>
-            </thead>
-            <tbody id="guests"></tbody>
-          </table>
-          <p id="empty" hidden>No guests match this view.</p>
+        <div
+          class="session-tabs"
+          role="group"
+          aria-label="Select session"
+          id="session-tabs"
+        ></div>
+        <div class="ledger-layout">
+          <section class="guest-ledger" aria-label="Guest list">
+            <div class="list-toolbar">
+              <label class="search"
+                ><span>⌕</span
+                ><input
+                  id="search"
+                  type="search"
+                  placeholder="Find a guest or note"
+                  aria-label="Search guests and notes" /></label
+              ><label class="status-filter"
+                >Show<select id="filter">
+                  <option value="all">All statuses</option>
+                  <option value="booked">Expected</option>
+                  <option value="arrived">Arrived</option>
+                  <option value="canceled">Canceled</option>
+                </select></label
+              >
+              <p id="count"></p>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>GUEST / NOTE</th>
+                    <th>PARTY</th>
+                    <th>STATUS</th>
+                    <th><span class="sr-only">Actions</span></th>
+                  </tr>
+                </thead>
+                <tbody id="guests"></tbody>
+              </table>
+              <p id="empty" hidden>No guests match this view.</p>
+            </div>
+          </section>
+          <section class="session-summary" aria-label="Session docket">
+            <div class="docket-title">
+              <p class="eyebrow" id="session-date"></p>
+              <h2 id="session-name"></h2>
+              <div class="docket-disc" aria-hidden="true"><span>A</span></div>
+              <p id="session-time"></p>
+            </div>
+            <div class="capacity">
+              <p>
+                <strong id="reserved">0</strong
+                ><span id="capacity-total">/ 24 seats</span>
+              </p>
+              <div class="meter"><div id="meter-fill"></div></div>
+              <span id="capacity-caption"></span>
+            </div>
+            <div class="arrived-summary">
+              <strong id="arrived">0</strong><span>Guests arrived</span>
+            </div>
+          </section>
         </div>
         <p class="message" id="message" role="status"></p>
         <footer>
           <div>
             <strong>THE DOOR</strong
-            ><span>Independent, local demo. No real reservations or shared data.</span>
+            ><span
+              >Independent, local demo. No real reservations or shared
+              data.</span
+            >
           </div>
           <div class="footer-actions">
-            <button id="export">Export guest list</button><button id="import">Import backup</button
+            <button id="export">Export guest list</button
+            ><button id="import">Import backup</button
             ><button id="reset">Reset demo</button
-            ><input type="file" id="import-file" accept=".json,application/json" hidden />
+            ><input
+              type="file"
+              id="import-file"
+              accept=".json,application/json"
+              hidden
+            />
           </div>
         </footer>
       </main>
