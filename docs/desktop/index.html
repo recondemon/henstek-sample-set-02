@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Side A — The Door</title>
+    <link rel="icon" href="assets/side-a-mark.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="model.js"></script>
+    <script defer src="renderer.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to guest list</a>
+    <aside>
+      <div class="brand">
+        <img src="assets/side-a-mark.svg" width="40" height="40" alt="" /><strong>SIDE A</strong>
+      </div>
+      <p class="side-label">THE DOOR / STUDIO TOOL</p>
+      <div class="nav-item">↗ <span>Guest list</span><span>03</span></div>
+      <div class="sidebar-bottom">
+        <p>SA-02 / DESKTOP</p>
+        <p id="storage-mode">Local browser preview</p>
+        <span class="local-dot">●</span> <span>Fictional records only</span>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header><span>NIGHT SHIFT / OPERATIONS</span><span>Sample programme · November</span></header>
+      <main id="main">
+        <div class="heading">
+          <div>
+            <p class="eyebrow">A GOOD NIGHT STARTS AT THE DOOR.</p>
+            <h1>Make room.</h1>
+          </div>
+          <button class="primary" id="add">+ Add booking</button>
+        </div>
+        <div class="session-tabs" role="group" aria-label="Select session" id="session-tabs"></div>
+        <section class="session-summary">
+          <div>
+            <p class="eyebrow" id="session-date"></p>
+            <h2 id="session-name"></h2>
+            <p id="session-time"></p>
+          </div>
+          <div class="capacity">
+            <p><strong id="reserved">0</strong><span id="capacity-total">/ 24 seats</span></p>
+            <div class="meter"><div id="meter-fill"></div></div>
+            <span id="capacity-caption"></span>
+          </div>
+          <div class="arrived-summary">
+            <strong id="arrived">0</strong><span>Guests arrived</span>
+          </div>
+        </section>
+        <div class="list-toolbar">
+          <label class="search"
+            ><span>⌕</span
+            ><input
+              id="search"
+              type="search"
+              placeholder="Find a guest or note"
+              aria-label="Search guests and notes" /></label
+          ><label class="status-filter"
+            >Show<select id="filter">
+              <option value="all">All statuses</option>
+              <option value="booked">Expected</option>
+              <option value="arrived">Arrived</option>
+              <option value="canceled">Canceled</option>
+            </select></label
+          >
+          <p id="count"></p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>GUEST / NOTE</th>
+                <th>PARTY</th>
+                <th>STATUS</th>
+                <th><span class="sr-only">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody id="guests"></tbody>
+          </table>
+          <p id="empty" hidden>No guests match this view.</p>
+        </div>
+        <p class="message" id="message" role="status"></p>
+        <footer>
+          <div>
+            <strong>THE DOOR</strong
+            ><span>Independent, local demo. No real reservations or shared data.</span>
+          </div>
+          <div class="footer-actions">
+            <button id="export">Export guest list</button><button id="import">Import backup</button
+            ><button id="reset">Reset demo</button
+            ><input type="file" id="import-file" accept=".json,application/json" hidden />
+          </div>
+        </footer>
+      </main>
+    </div>
+    <dialog id="edit-dialog" aria-labelledby="edit-title">
+      <button class="close" aria-label="Close editor">×</button>
+      <p class="eyebrow">THE DOOR / GUEST DETAILS</p>
+      <h2 id="edit-title">A seat at the table.</h2>
+      <form id="edit-form">
+        <label
+          >Example guest name<input
+            name="name"
+            required
+            maxlength="60"
+            autocomplete="off"
+            placeholder="Alex Morgan"
+        /></label>
+        <div class="form-row">
+          <label
+            >Party size<input
+              name="party"
+              type="number"
+              min="1"
+              max="6"
+              required
+              value="2" /></label
+          ><label
+            >Status<select name="status">
+              <option value="booked">Expected</option>
+              <option value="arrived">Arrived</option>
+              <option value="canceled">Canceled</option>
+            </select></label
+          >
+        </div>
+        <label>Session<select name="session"></select></label
+        ><label
+          >Note<textarea
+            name="note"
+            rows="3"
+            maxlength="500"
+            placeholder="Fictional details only"
+          ></textarea>
+        </label>
+        <p class="message" id="form-error" role="status"></p>
+        <button class="primary" type="submit">Save booking ↗</button>
+      </form>
+    </dialog>
+    <dialog id="confirm-dialog" aria-labelledby="confirm-title">
+      <h2 id="confirm-title">Replace this list?</h2>
+      <p id="confirm-copy"></p>
+      <div class="confirm-actions">
+        <button id="decline">Keep current list</button
+        ><button class="primary" id="confirm">Replace list</button>
+      </div>
+    </dialog>
+  </body>
+</html>

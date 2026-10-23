@@ -1,0 +1,29 @@
+name: Sample checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  browser-and-desktop-models:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - run: git diff --exit-code -- docs
+      - run: npm --prefix samples/desktop ci --ignore-scripts
+      - run: npm --prefix samples/desktop audit --audit-level=moderate
+  iphone-models:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm run test:mobile
+      - run: xcodebuild -project samples/mobile/SideAPocket.xcodeproj -scheme SideAPocket -sdk iphonesimulator -configuration Debug -derivedDataPath build/mobile CODE_SIGNING_ALLOWED=NO build

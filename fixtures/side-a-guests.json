@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "guests": [
+    {
+      "id": "sa-001",
+      "name": "Alex Morgan",
+      "session": "slow",
+      "party": 2,
+      "status": "arrived",
+      "note": "Window seats, if available."
+    },
+    {
+      "id": "sa-002",
+      "name": "Jamie Reed",
+      "session": "slow",
+      "party": 4,
+      "status": "booked",
+      "note": "Celebrating a birthday."
+    },
+    {
+      "id": "sa-003",
+      "name": "Casey Brooks",
+      "session": "slow",
+      "party": 2,
+      "status": "booked",
+      "note": "First visit."
+    },
+    {
+      "id": "sa-004",
+      "name": "Robin Ellis",
+      "session": "slow",
+      "party": 1,
+      "status": "arrived",
+      "note": "Listening counter."
+    },
+    {
+      "id": "sa-005",
+      "name": "Taylor Quinn",
+      "session": "slow",
+      "party": 3,
+      "status": "booked",
+      "note": ""
+    },
+    {
+      "id": "sa-006",
+      "name": "Avery Lane",
+      "session": "deep",
+      "party": 2,
+      "status": "booked",
+      "note": "Near the speakers."
+    },
+    {
+      "id": "sa-007",
+      "name": "Jordan Wells",
+      "session": "sunday",
+      "party": 2,
+      "status": "booked",
+      "note": ""
+    },
+    {
+      "id": "sa-008",
+      "name": "Drew Parker",
+      "session": "slow",
+      "party": 2,
+      "status": "canceled",
+      "note": "Changed plans."
+    }
+  ]
+}

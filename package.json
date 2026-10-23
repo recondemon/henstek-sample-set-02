@@ -1,0 +1,17 @@
+{
+  "name": "henstek-sample-set-02",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sample Set 02 — Side A. A listening-room website, native iPhone app and desktop guest list.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:mobile": "swiftc samples/mobile/SideAPocket/Pocket.swift tests/PocketChecks.swift -o /tmp/henstek-side-a-model-checks && /tmp/henstek-side-a-model-checks",
+    "desktop": "npm --prefix samples/desktop start"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

@@ -1,0 +1,270 @@
+:root {
+  color-scheme: dark;
+  background: #191716;
+  color: #eee8dc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:focus-visible {
+  outline: 3px solid #f16a50;
+  outline-offset: 5px;
+}
+header,
+main,
+footer {
+  width: min(1120px, calc(100% - 64px));
+  margin: auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid #4b4037;
+}
+.henstek {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+nav {
+  display: flex;
+  gap: 25px;
+  font-size: 12px;
+}
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus {
+  left: 10px;
+  top: 10px;
+  background: #eee8dc;
+  color: #191716;
+  padding: 12px;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+h1,
+h2 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+h1 {
+  font-size: 140px;
+  line-height: 1;
+}
+h2 {
+  font-size: 34px;
+}
+.intro {
+  padding: 72px 0 55px;
+}
+.eyebrow {
+  font: 10px/1.6 monospace;
+  letter-spacing: 0.13em;
+  color: #d7b9a1;
+}
+.title {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  margin: 18px 0 24px;
+}
+.title img {
+  transform: rotate(-12deg);
+}
+p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #bbb0a1;
+}
+.intro > p:not(.eyebrow) {
+  max-width: 650px;
+}
+.intro p.lead {
+  font:
+    32px/1.25 Georgia,
+    serif;
+  color: #eee8dc;
+  letter-spacing: -0.025em;
+  margin-bottom: 22px;
+}
+.button {
+  display: inline-flex;
+  border: 1px solid #75604f;
+  padding: 16px 24px;
+  font-size: 13px;
+  margin-top: 24px;
+}
+.primary {
+  background: #f16a50;
+  border-color: #f16a50;
+  color: #1b110d;
+  font-weight: 600;
+}
+.samples {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.samples article {
+  border: 1px solid #4b4037;
+  min-width: 0;
+  overflow: hidden;
+}
+.samples article.web {
+  grid-column: 1/-1;
+}
+.meta {
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  font: 9px monospace;
+  letter-spacing: 0.1em;
+  color: #d7b9a1;
+  border-bottom: 1px solid #4b4037;
+}
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #100f0e;
+  padding: 32px;
+}
+.screen img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  border: 1px solid #4b4037;
+}
+.screen.phone,
+.screen.desktop {
+  height: 410px;
+}
+.screen.phone img {
+  width: auto;
+  max-width: 100%;
+  border-radius: 28px;
+}
+.copy {
+  padding: 30px;
+}
+.copy p {
+  font-size: 13px;
+  margin-top: 14px;
+}
+.links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #f88c70;
+  margin-top: 22px;
+}
+.mix {
+  padding: 55px 0;
+  border-bottom: 1px solid #4b4037;
+}
+.mix h2 {
+  margin: 14px 0 18px;
+}
+.mix p {
+  max-width: 660px;
+}
+.mix strong {
+  color: #eee8dc;
+}
+.notes {
+  padding: 50px 0;
+}
+.notes p {
+  font-size: 12px;
+  max-width: 800px;
+  margin-top: 18px;
+}
+.notes a {
+  display: inline-block;
+  font-size: 12px;
+  color: #f88c70;
+  margin-top: 22px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font: 10px monospace;
+  border-top: 1px solid #4b4037;
+  padding: 26px 0 40px;
+  color: #bbb0a1;
+}
+@media (max-width: 650px) {
+  header,
+  main,
+  footer {
+    width: calc(100% - 40px);
+  }
+  nav {
+    gap: 15px;
+    font-size: 10px;
+  }
+  .intro {
+    padding: 45px 0;
+  }
+  .title {
+    gap: 24px;
+  }
+  h1 {
+    font-size: 85px;
+  }
+  .title img {
+    width: 70px;
+    height: 70px;
+  }
+  .samples {
+    grid-template-columns: 1fr;
+  }
+  .samples article.web {
+    grid-column: auto;
+  }
+  .screen {
+    padding: 15px;
+  }
+  .screen.phone,
+  .screen.desktop {
+    height: 360px;
+  }
+  .meta {
+    padding: 16px;
+    font-size: 8px;
+  }
+  .copy {
+    padding: 24px;
+  }
+  .copy h2 {
+    font-size: 29px;
+  }
+  .intro p.lead {
+    font-size: 28px;
+  }
+  footer {
+    line-height: 1.7;
+  }
+  .notes h2 {
+    font-size: 29px;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "side-a-desk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sample Set 02 \u2014 Side A. An offline fictional listening-room guest list.",
+  "license": "MIT",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-packager . 'Side A Desk' --platform=darwin --arch=arm64 --out=../../build/desktop --overwrite --icon=icon.icns"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "electron": "45.0.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
