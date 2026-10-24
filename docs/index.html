@@ -10,7 +10,7 @@
     />
     <link rel="icon" href="web/assets/side-a-mark.svg" />
     <link rel="stylesheet" href="catalog.css" />
-  </head>
+  <link rel="stylesheet" href="sample-viewer.css"><script src="sample-viewer.js" defer></script></head>
   <body>
     <a class="skip" href="#main">Skip to samples</a>
     <header>
@@ -43,8 +43,7 @@
       <section class="samples">
         <article class="web">
           <div class="meta"><span>SA-02 / WEB</span><span>DISCOVER & BOOK</span></div>
-          <a class="screen" href="web/"
-            ><img
+          <a class="screen" href="web/" data-preview="web" data-label="SA-02 / Web" data-title="The listening room" data-inquiry="https://henstek.dev/start?sample=set-02-website&amp;style=sa-02-web" data-preview-image aria-label="Try SA-02 / Web — The listening room"><img
               src="previews/sa-02-website.png"
               width="1440"
               height="1000"
@@ -58,17 +57,15 @@
               demo tickets and a saveable record shelf.
             </p>
             <div class="links">
-              <a href="web/">Try the website ↗</a
-              ><a href="https://henstek.dev/start?sample=set-02-website&style=sa-02-web"
+              <a href="web/" data-preview="web" data-label="SA-02 / Web" data-title="The listening room" data-inquiry="https://henstek.dev/start?sample=set-02-website&amp;style=sa-02-web">Try interactive preview ↗</a><a href="https://henstek.dev/start?sample=set-02-website&style=sa-02-web"
                 >Start with web ↗</a
               >
             </div>
           </div>
         </article>
         <article>
-          <div class="meta"><span>SA-02 / MOBILE</span><span>NATIVE IPHONE</span></div>
-          <a class="screen phone" href="previews/sa-02-iphone-native.png"
-            ><img
+          <div class="meta"><span>SA-02 / MOBILE</span><span>INTERACTIVE MOBILE PREVIEW</span></div>
+          <a class="screen phone" href="mobile/" data-preview="mobile" data-label="SA-02 / Mobile" data-title="Side A Pocket" data-inquiry="https://henstek.dev/start?sample=set-02-iphone&amp;style=sa-02-mobile" data-preview-image aria-label="Try SA-02 / Mobile — Side A Pocket"><img
               src="previews/sa-02-iphone-native.png"
               width="1206"
               height="2622"
@@ -82,9 +79,7 @@
               persistence, and portable backup import/export.
             </p>
             <div class="links">
-              <a href="https://github.com/recondemon/henstek-sample-set-02/tree/main/samples/mobile"
-                >Source & setup ↗</a
-              ><a href="https://henstek.dev/start?sample=set-02-iphone&style=sa-02-mobile"
+              <a href="mobile/" data-preview="mobile" data-label="SA-02 / Mobile" data-title="Side A Pocket" data-inquiry="https://henstek.dev/start?sample=set-02-iphone&amp;style=sa-02-mobile">Try interactive preview ↗</a><a href="https://henstek.dev/start?sample=set-02-iphone&style=sa-02-mobile"
                 >Start with mobile ↗</a
               >
             </div>
@@ -92,8 +87,7 @@
         </article>
         <article>
           <div class="meta"><span>SA-02 / DESKTOP</span><span>THE DOOR</span></div>
-          <a class="screen desktop" href="desktop/"
-            ><img
+          <a class="screen desktop" href="desktop/" data-preview="desktop" data-label="SA-02 / Desktop" data-title="The Door" data-inquiry="https://henstek.dev/start?sample=set-02-desktop&amp;style=sa-02-desktop" data-preview-image aria-label="Try SA-02 / Desktop — The Door"><img
               src="previews/sa-02-desktop.png"
               width="1440"
               height="1000"
@@ -107,8 +101,7 @@
               search and local backup recovery.
             </p>
             <div class="links">
-              <a href="desktop/">Try the browser preview ↗</a
-              ><a href="https://henstek.dev/start?sample=set-02-desktop&style=sa-02-desktop"
+              <a href="desktop/" data-preview="desktop" data-label="SA-02 / Desktop" data-title="The Door" data-inquiry="https://henstek.dev/start?sample=set-02-desktop&amp;style=sa-02-desktop">Try interactive preview ↗</a><a href="https://henstek.dev/start?sample=set-02-desktop&style=sa-02-desktop"
                 >Start with desktop ↗</a
               >
             </div>
@@ -144,7 +137,7 @@
           >Public source · MIT license ↗</a
         >
       </section>
-    </main>
+    <p class="preview-disclosure">Click any screen to try it. Mobile demos adapt the native app’s key flows for the browser; device features are not included. Mobile edits reset when reloaded.</p></main>
     <footer>
       <span>© 2026 HensTek · Sample Set 02</span
       ><a href="https://henstek.dev/start?sample=set-02">Discuss your version ↗</a>

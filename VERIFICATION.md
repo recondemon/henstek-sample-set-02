@@ -28,3 +28,9 @@ The October 23 revision replaces the dark split hero with a cream record-store m
 No App Store submission, physical-device pass, Android/iPad implementation, Windows/Linux native test or signed/notarized desktop distribution is included. VoiceOver and a full WCAG audit have not been completed. Only fictional local data is used; there is no shared backend, real booking, streaming, payment, email or notification integration.
 
 Website, iPhone and desktop backups are independent formats. Native storage refuses to overwrite damaged data and retains a previous valid revision. See the platform READMEs for manual recovery and limitations. Browser storage and plaintext local exports are sample mechanisms, not a production data-security design.
+
+## Interactive showcase — October 23, 2026
+
+Verified locally in Chrome: gallery image opens each web/mobile/desktop demo in the expanded viewer; Close and Escape return to the gallery, with focus restored to the initiating link. Mobile framing was checked at a 390 × 844 browser viewport. Web and desktop use the existing browser implementations. The mobile companion is a browser adaptation, not an iOS runtime.
+
+Mobile checks: Field Notes checklist changes and completion filters; Side A demo booking, ticket display and saved-record updates; Stillwater observation creation, favorite state and search. Desktop checks: job filtering, guest check-in totals and journal favorites. Existing model and published-asset checks pass. Native applications were not changed by this release.

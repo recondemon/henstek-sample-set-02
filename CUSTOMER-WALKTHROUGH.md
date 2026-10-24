@@ -25,3 +25,7 @@ These are three independent local examples, not a connected reservation system. 
 | Handoff | Source, deployment access, runbook, training and any separately agreed support |
 
 Reference functionality and style separately: “SA-02 / Desktop guest-list workflow with CF-01 / Web colors.” The inquiry form records both. Sample selection is a scoping aid, not a fixed-price promise. Agree deliverables, acceptance criteria, milestones and ownership in the project agreement before production work.
+
+## Try every platform in the gallery
+
+Click a sample screen or **Try interactive preview** to open the working demo without leaving the gallery. Web and desktop use their existing browser interfaces; `/mobile/` is a browser adaptation of the SwiftUI screens. It is not an iOS emulator and does not include native device or file integrations. Mobile edits live in memory until reload or Reset demo. The viewer keeps the reference label and inquiry link visible. Press Escape or Close to return; Open separately is available if browser embedding/storage is restricted.

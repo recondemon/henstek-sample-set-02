@@ -18,3 +18,14 @@ for (const [source, target, files] of [
 await cp(resolve(root, "public/previews"), resolve(root, "docs/previews"), { recursive: true });
 await writeFile(resolve(root, "docs/.nojekyll"), "");
 console.log("Built Side A catalog, website and desktop preview in docs/.");
+
+// Browser companions are published alongside the native source and desktop renderer.
+const previewFs = await import('node:fs/promises');
+await previewFs.cp(resolve(root, 'samples/mobile-preview'), resolve(root, 'docs/mobile'), {recursive: true});
+for (const name of ['sample-viewer.js', 'sample-viewer.css', 'preview-bridge.js'])
+  await previewFs.copyFile(resolve(root, 'public', name), resolve(root, 'docs', name));
+for (const platform of ['web', 'desktop', 'mobile']) {
+  const file = resolve(root, 'docs', platform, 'index.html');
+  const html = await previewFs.readFile(file, 'utf8');
+  await previewFs.writeFile(file, html.replace('</body>', '<script src="../preview-bridge.js" defer></script></body>'));
+}

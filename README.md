@@ -56,3 +56,7 @@ npm run test:mobile
 Node tests cover booking rules, import validation, aggregate capacity, native storage recovery, IPC origin checks and published asset paths. Swift checks cover archive validation, persistence and damaged-file preservation. GitHub Actions builds the iPhone simulator target as well.
 
 Source lives in `samples/`, gallery source in `public/`, fictional backups in `fixtures/`, actual captures in `screenshots/`, and generated GitHub Pages output in `docs/`. Edit source and rebuild; do not hand-edit `docs/`.
+
+## Try every platform in the gallery
+
+Click a sample screen or **Try interactive preview** to open the working demo without leaving the gallery. Web and desktop use their existing browser interfaces; `/mobile/` is a browser adaptation of the SwiftUI screens. It is not an iOS emulator and does not include native device or file integrations. Mobile edits live in memory until reload or Reset demo. The viewer keeps the reference label and inquiry link visible. Press Escape or Close to return; Open separately is available if browser embedding/storage is restricted.
